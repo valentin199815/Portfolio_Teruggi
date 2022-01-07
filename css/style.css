@@ -4,7 +4,7 @@
 }
 
 nav.navbar {
-  background-color: #1d203a !important;
+  background-color: #0b0c13 !important;
 }
 
 nav.navbar a {
@@ -18,9 +18,10 @@ nav.navbar a:hover {
 
 header div {
   margin: auto;
-  background-color: #f8f5f5;
-  padding-bottom: 10%;
+  background-color: #1d203a;
+  padding-bottom: 5%;
   width: 100%;
+  color: white;
 }
 
 header div .maincontainer {
@@ -42,6 +43,10 @@ header div .maincontainer img {
   border-radius: 50%;
 }
 
+header div .maincontainer h3 {
+  margin: 10px 0 50px;
+}
+
 header div .maincontainer h2 {
   text-align: center;
   padding-bottom: 3%;
@@ -54,21 +59,26 @@ header div .maincontainer h2 span {
 header div .maincontainer p {
   padding: 0% 35% 3% 35%;
   text-justify: auto;
+  font-size: 18px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 700px) {
+  header div .maincontainer p {
+    width: 100%;
+    padding: 0% 5% 3% 5%;
+  }
 }
 
 header div .maincontainer a {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-  -webkit-text-decoration-color: black;
-          text-decoration-color: black;
+  color: white;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
 }
 
 header div .maincontainer a:hover {
   text-decoration: underline;
-  -webkit-text-decoration-color: black;
-          text-decoration-color: black;
 }
 
 main .maincontainer {
@@ -108,15 +118,18 @@ main .maincontainer .right img {
   margin-bottom: 10%;
 }
 
-main .maincontainer .right a {
+main .maincontainer .right div a {
   text-decoration: none;
   margin-top: 10%;
+  background-color: #1d203a;
+  color: white;
   padding: 16px 20px;
-  color: black;
+  border: 0;
+  outline: 0;
 }
 
-main .maincontainer .right a:hover {
-  outline: 1px solid black;
+main .maincontainer .right div a:hover {
+  background-color: #333758;
 }
 
 @media screen and (max-width: 900px) {
@@ -126,17 +139,14 @@ main .maincontainer .right a:hover {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  main .maincontainer .right {
+  main .maincontainer .right div {
+    width: 30%;
     margin: auto;
-  }
-  main .maincontainer .right a {
-    display: inline-block;
-    margin: 0 38%;
   }
 }
 
 main .container-fluid {
-  margin: 10% 0%;
+  margin: 3% 0%;
 }
 
 main .container-fluid .digital {
@@ -188,6 +198,7 @@ main .container-fluid .text1 a {
   text-decoration: none;
   padding: 8px 20px;
   margin-left: 3%;
+  margin-top: 23px;
 }
 
 main .container-fluid .text1 a:hover {
@@ -204,6 +215,9 @@ main .container-fluid .text1 a:hover {
 
 main .container1 div {
   margin: auto;
+  background-color: #1d203a;
+  color: white;
+  padding: 1% 0 0;
 }
 
 main .container1 div .text2 {
@@ -217,16 +231,23 @@ main .container1 div .text2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-top: 4px solid black;
-  width: 50%;
-  height: 400px;
+  width: 70%;
+  height: 600px;
 }
 
 main .container1 div .text2 p {
-  font-size: 35px;
+  font-size: 50px;
   padding: 3% 9%;
   text-align: center;
   font-weight: bolder;
+  font-style: italic;
+}
+
+@media screen and (max-width: 700px) {
+  main .container1 div .text2 p {
+    font-size: 30px;
+    padding: 1% 9%;
+  }
 }
 
 main .container1 div .text2 img {
@@ -234,16 +255,23 @@ main .container1 div .text2 img {
       -ms-grid-row-align: center;
       align-self: center;
   height: 70px;
-  padding: 5% 0%;
+  padding: 1% 0%;
 }
 
-main .container1 div .text2 a {
+main .container1 div .text2 div a {
   text-decoration: none;
-  color: black;
+  color: white;
+  margin-bottom: 10%;
 }
 
-main .container1 div .text2 a:hover {
+main .container1 div .text2 div a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+  main .container1 div .text2 div a a {
+    margin-bottom: 10%;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -263,18 +291,15 @@ main .container1 div .text2 a:hover {
 
 main .container_pictures {
   width: 100%;
-  padding: 10% 0% 2%;
+  padding: 0% 0% 2%;
 }
 
 main .container_pictures .pictures {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   width: 100%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   padding: 0%;
 }
 
@@ -288,6 +313,13 @@ main .container_pictures .pictures img {
   padding: 0;
 }
 
+@media screen and (max-width: 700px) {
+  main .container_pictures .pictures img {
+    width: 100%;
+    padding: 0;
+  }
+}
+
 main .button div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,6 +327,7 @@ main .button div {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 30px 0 50px;
 }
 
 main .button div a {

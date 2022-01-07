@@ -11,7 +11,8 @@
     box-sizing: border-box;
 }
 nav.navbar{
-    background-color: rgb(29, 32, 58) !important;
+    background-color: rgb(11, 12, 19)!important;
+
 }
 nav.navbar a {
     color: white !important;
@@ -22,9 +23,10 @@ nav.navbar a {
 }
 header div {
     margin: auto;
-    background-color: rgb(248, 245, 245);
-    padding-bottom: 10%;
+    background-color: rgb(29, 32, 58);
+    padding-bottom: 5%;
     width: 100%;
+    color: white;
     .maincontainer{
         display: flex;
         flex-direction: column;
@@ -33,6 +35,9 @@ header div {
         width: 25%;
         padding: 8% 0%;
         border-radius: 50%;
+    }
+    h3{
+        margin: 10px 0 50px;
     }
     h2{
         text-align: center;
@@ -44,15 +49,21 @@ header div {
     p{
        padding: 0% 35% 3% 35%; 
        text-justify: auto;
+       font-size: 18px;
+       text-align: justify;
+       @media screen and (max-width: 700px){
+        width: 100%;
+        padding: 0% 5% 3% 5%;
+       }
     }
     a {
-        text-decoration-line: underline;
-        text-decoration-color: black;
+        color: white;
         font-weight: bold;
         cursor: pointer;
+        text-decoration: none;
         &:hover{
             text-decoration: underline;
-            text-decoration-color: black;
+            
         }  
     }
     } 
@@ -79,13 +90,18 @@ main .maincontainer{
             width: 100%;
             margin-bottom: 10%;
         }
-        a{
-            text-decoration: none;
-            margin-top: 10%;
-            padding: 16px 20px;
-            color: black;
-            &:hover{
-                outline: 1px solid black;
+        div {
+            
+            a{
+                text-decoration: none;
+                margin-top: 10%;
+                background-color: rgb(29, 32, 58);
+                color: white;
+                padding: 16px 20px;
+                border: 0; outline: 0;
+                &:hover{
+                    background-color: rgb(51, 55, 88);
+                }
             }
         }
     }
@@ -94,17 +110,16 @@ main .maincontainer{
     main .maincontainer{
         flex-direction: column;
         .right{
+            div{
+            width: 30%;
             margin: auto;
-            a{
-                display: inline-block;
-                margin: 0 38%;
             }
         }
     }
 }
 
 main .container-fluid{
-    margin: 10% 0%;
+    margin: 3% 0%;
     .digital{
         display: flex;
         justify-content: flex-end;
@@ -132,6 +147,7 @@ main .container-fluid{
         a{
             @include button();
             margin-left: 3%;
+            margin-top: 23px;
         }
     }
     @media screen and (min-width: 200px) and (max-width: 800px) {
@@ -142,30 +158,45 @@ main .container-fluid{
 }
 main .container1 div{
     margin: auto;
+    background-color: rgb(29, 32, 58);
+    color: white;
+    padding: 1% 0 0;
  .text2{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-top: 4px solid black;
-    width: 50%;
-    height: 400px;
+    width: 70%;
+    height: 600px;
+    
     p{
-        font-size: 35px;
+        font-size: 50px;
         padding: 3% 9%;
         text-align: center;
         font-weight: bolder;
+        font-style: italic;
+        @media screen and (max-width: 700px){
+            font-size: 30px;
+            padding: 1% 9%;
+        }
     }
     img{
         align-self: center;
         
         height: 70px;
-        padding: 5% 0%;
+        padding: 1% 0%;
     }
-    a{
+    div a{
         text-decoration: none;
-        color: black;
+        color: white;
+        margin-bottom: 10%;
+        
         &:hover{
             text-decoration: underline;
+        }
+        @media screen and (max-width: 700px){
+            a{
+                margin-bottom: 10%;
+            }
         }
     }
 }
@@ -185,13 +216,12 @@ main .container1 div{
 }
 main .container_pictures {
     width: 100%;
-    padding: 10% 0% 2%;
+    padding: 0% 0% 2%;
     
     .pictures{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         width: 100%;
-        flex-wrap: wrap;
-        justify-content:space-around;
         padding: 0%;
         
     img{
@@ -200,13 +230,21 @@ main .container_pictures {
         align-items: center;
         text-align: center;
         padding: 0;
+        @media screen and (max-width:700px){
+            width: 100%;
+            padding: 0;
+        }
     }
+    }
+    @media screen and (max-width:700px){
+        
     }
 }
 main .button div{
     
     display: flex;
     justify-content: center;
+    margin: 30px 0 50px;
    a{
         @include button(); 
     }
